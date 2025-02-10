@@ -76,6 +76,13 @@ public class Reddit4jClient {
             }
         }
 
+        friends.sort(new Comparator<Friend>() {
+            @Override
+            public int compare(Friend o1, Friend o2) {
+                return Long.compare(o1.latest(), o2.latest());
+            }
+        });
+
         Map<String, Object> model = new HashMap<>();
         model.put("friends", friends);
 
