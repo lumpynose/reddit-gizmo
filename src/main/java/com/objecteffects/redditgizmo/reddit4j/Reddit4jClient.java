@@ -61,19 +61,21 @@ public class Reddit4jClient {
                 if (posts.isEmpty()) {
                     Friend friend = new Friend(user.getName(), 0L);
                     friends.add(friend);
+                    log.info("{} {}", friend.name(), friend.latest());
                 }
                 else {
                     Friend friend = new Friend(user.getName(),
                             posts.getFirst().getCreatedUtc());
                     friends.add(friend);
-
-                    log.info("{} {}", user.getName(), posts.getFirst().getCreatedUtc());
+                    log.info("{} {}", friend.name(), friend.latest());
                 }
             }
             catch (HttpStatusException ex) {
                 Friend friend = new Friend(user.getName(), 0L);
                 friends.add(friend);
+                log.info("{} {}", friend.name(), friend.latest());
             }
+
         }
 
         friends.sort(new Comparator<Friend>() {
