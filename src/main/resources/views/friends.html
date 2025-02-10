@@ -13,7 +13,7 @@
         <td>
             <a href="null" th:href="@{'https://www.reddit.com/user/' + ${friend.name}}">
                 <span th:text="${friend.name}">name</span></a>
-            <span th:text="${friend.latest}"></span>
+            <span th:datetime="${friend.latest}"></span>
         </td>
     </tr>
 </table>
