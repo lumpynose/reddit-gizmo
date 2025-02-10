@@ -1,0 +1,2 @@
+MICRONAUT_ENVIRONMENTS=reddit
+MICRONAUT_CONFIG_FILES=/home/rusty/micronaut/application-reddit.properties

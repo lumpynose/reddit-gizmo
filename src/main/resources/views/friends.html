@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Friends</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <!--    <link rel="stylesheet" type="text/css" media="all"-->
+    <!--          href="/css/gtvg.css" th:href="@{/css/gtvg.css}" />-->
+</head>
+<body>
+<table>
+    <tr th:each="friend : ${friends}">
+        <td>
+            <a href="null" th:href="@{'https://www.reddit.com/user/' + ${friend.name}}">
+                <span th:text="${friend.name}">name</span></a>
+            <span th:text="${friend.latest}"></span>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

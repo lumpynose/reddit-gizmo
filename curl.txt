@@ -1,0 +1,1 @@
+curl -X POST -d 'grant_type=password&username={username}&password={password}' --user '{app_id}:{secret}' https://www.reddit.com/api/v1/access_token
